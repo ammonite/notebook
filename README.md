@@ -19,11 +19,9 @@ array([ 0.000857,  0.001182,  0.001619,  0.002113,  0.002702,  0.003351,
 Now, I want to fit these data with, say, a 4 degree polynomial. So I do:
 
 >>> coefs = np.polyfit(x, y, 4)
->>> ffit = np.poly1d(coefs)
-Now I create a new grid for x values to evaluate the fitting function ffit:
+>>> ffit = np.poly1d(coefs) # Now I create a new grid for x values to evaluate the fitting function ffit:
 
->>> x_new = np.linspace(x[0], x[-1], num=len(x)*10)
-When I do all the plotting (data set and fitting curve) with the command:
+>>> x_new = np.linspace(x[0], x[-1], num=len(x)*10) # When I do all the plotting (data set and fitting curve) with the command:
 
 >>> fig1 = plt.figure()                                                                                           
 >>> ax1 = fig1.add_subplot(111)                                                                                   
